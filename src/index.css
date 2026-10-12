@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Pixelify+Sans:wght@400;600&display=swap');
+
+:root {
+  --bg : #1b1433;
+  --box: #2a1f4d;
+  --ink: #fdf6e3;
+  --dim: #b9a9d6;
+  --pink: #ff8fab;
+  --mint: #9ef5c2;
+  --sun: #ffd166;
+
+  --head: 'Silkscreen', monospace;
+  --body: 'Pixelify Sans', monospace;
+}
+
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+h1,h2{
+  font-family: var(--head);
+  line-height: 1.2;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.screen {
+  min-height: 100vh;
+  padding: 5rem 1.5rem;
+  display: grid;
+  place-items: center;
+}
+
+.pixel-box {
+  background: var(--box);
+  border: 4px solid var(--ink);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+.label{
+  display: block;
+  font-family: var(--head);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: var(--sun);
+  margin-bottom: 0.5rem;
+}
+
+@keyframes blink{
+  50%{
+    visibility: hidden;
+  }
+}
+
+@keyframes hop {
+  50%{
+    transform: translateY(-8px);
+  }
+}
